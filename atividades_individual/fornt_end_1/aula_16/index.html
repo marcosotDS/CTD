@@ -4,28 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Login</title>
 </head>
+
+
+    <header>
+    <div class="desconto">20% de desconto em todos os produtos!</div>
+    <div class="nome_da_loja"> 
+    <img class="loja-icon" src="data:image/png;base64,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" alt="icone loja">
+     <h1>Nome da loja</h1> 
+     </div>
+     </header>
+
 <body>
 
-    <header class="nome_da_loja">Nome da loja</header>
-
-    <H1> Login</H1>
+<main class="container">
     
-    <div>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome">
+    <div class="formulario">
+    
+    <form action="">
+    
+    <h2>Login</h2>    
+    <div class="input-field">
+        
+        <input type="text" id="nome" placeholder="Usuario">
     </div>
-    <div>
-        <label for="email">E-mail:</label>
-        <input type="email" id="email">
+    <div class="input-field">
+        
+        <input type="email" id="email" placeholder="E-mail">
     </div>
-    <button>Entrar</button>
+    <button class="botao">Entrar</button>
 
     <p>Não possui uma conta?</p> 
     <a href="https://wwww.lore">Registre - se</a>
 
     </a>
+    </div>
+</div>
+</form>
+</main>
 </body>
 
 <footer> Todos os direitos reservados a FRONT END 1</footer>
